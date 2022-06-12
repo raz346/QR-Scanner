@@ -23,7 +23,6 @@ function QRgenerator() {
         downloadLink.click();
         document.body.removeChild(downloadLink);
     };
-
     return (
       <div>
           <Grid style={containerStyle}>
@@ -39,7 +38,6 @@ function QRgenerator() {
                     <span>QR Generator</span>
                 </Grid>
             </Grid>
-            
             <Grid style={{marginTop:30}}>
                 <TextField onChange={handleChange} style={{width:320}}
                 value={qr} label="QR content" size="medium" variant="outlined" color="primary" 
@@ -60,7 +58,12 @@ function QRgenerator() {
             <div>
                 {
                     qr ? 
-                    <Grid container direction="row" justifyContent="center" alignItems="center">
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                    >
                         <Grid item style={{width:320}}>
                             <Alert severity="success">
                                 {qr}

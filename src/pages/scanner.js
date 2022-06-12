@@ -18,7 +18,6 @@ function QRscanner() {
         console.error(err)
         setAlert('error');
     }
-
     return (
       <div>
             <Grid style={containerStyle}>
@@ -44,7 +43,12 @@ function QRscanner() {
                         />
                     </Grid>
                 </center>
-                <Grid container justifyContent="center" alignItems="center" style={{marginTop:110}}>
+                <Grid 
+                    container
+                    justifyContent="center"
+                    alignItems="center"
+                    style={{marginTop:110}}
+                >
                     <Alert severity={alertStatus}>
                         {qrscan}
                     </Alert>

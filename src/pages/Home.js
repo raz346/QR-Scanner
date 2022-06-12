@@ -1,11 +1,8 @@
 import {Grid, Button, Typography} from '@material-ui/core';
 import { Link } from "react-router-dom";
 import {containerStyle, linkStyle, mainMenuButtonStyle} from './../sharedStyle'
-// Style definitions
-
 
 function Home() {
-
     return (
         <div>
             <Grid style={containerStyle} container spacing={6}>
