@@ -40,13 +40,12 @@ function QRgenerator() {
                 </Grid>
             </Grid>
             
-            <div style={{marginTop:30}}>
+            <Grid style={{marginTop:30}}>
                 <TextField onChange={handleChange} style={{width:320}}
                 value={qr} label="QR content" size="medium" variant="outlined" color="primary" 
                 />
-            </div>
-
-            <div>
+            </Grid>
+            <Grid>
                 {
                     qr ?
                     <QRcode 
@@ -57,20 +56,18 @@ function QRgenerator() {
                     /> :
                     <p>No QR code preview</p>
                 }
-            </div>
+            </Grid>
             <div>
                 {
                     qr ? 
-                    <Grid container justifyContent="center" alignItems="center">
-                        <Grid item xs={5} style={{marginLeft:'20px'}}>
+                    <Grid container direction="row" justifyContent="center" alignItems="center">
+                        <Grid item style={{width:320}}>
                             <Alert severity="success">
                                 {qr}
                             </Alert>
-                        </Grid>
-                        <Grid item xs={2}>
-                        <Fab onClick={downloadQR} style={{marginLeft:10}} color="primary">
-                            <GetApp/>
-                        </Fab>
+                            <Fab onClick={downloadQR} style={{marginTop:5}} color="primary">
+                                <GetApp/>
+                            </Fab>
                         </Grid>
                     </Grid> :
                     <p></p>
