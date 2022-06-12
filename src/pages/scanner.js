@@ -3,23 +3,9 @@ import {Grid, Button} from '@material-ui/core'
 import Alert from '@mui/material/Alert';
 import { Link } from "react-router-dom";
 import QrScan from 'react-qr-reader'
+import {containerStyle, backButton, linkStyle} from './../sharedStyle'
 
 function QRscanner() {
-    const linkStyle = {textDecoration: 'none'}
-    const containerStyle = {
-        height: '90vh',
-        width: '60vw',
-        backgroundColor: '#ebeff5',
-        boxShadow: '5px 5px 5px #c7d5eb'
-    };
-    const backButton = {
-        width: '10vw',
-        height: '6vh',
-        backgroundColor: '#40e36b',
-        fontSize: '1vw',
-        marginRight: '40px',
-        marginTop: '5px'
-    };
     const [alertStatus, setAlert] = useState('error');
     const [qrscan, setQrscan] = useState('No result');
     const handleScan = data => {

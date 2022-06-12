@@ -1,20 +1,8 @@
 import {Grid, Button, Typography} from '@material-ui/core';
 import { Link } from "react-router-dom";
-
+import {containerStyle, linkStyle, mainMenuButtonStyle} from './../sharedStyle'
 // Style definitions
-const buttonStyle = {
-    width: '20vw',
-    height: '10vh',
-    backgroundColor: '#40e36b',
-    fontSize: '2vw'
-};
-const linkStyle = {textDecoration: 'none'};
-const containerStyle = {
-    height: '90vh',
-    width: '60vw',
-    backgroundColor: '#ebeff5',
-    boxShadow: '5px 5px 5px #c7d5eb'
-};
+
 
 function Home() {
 
@@ -28,14 +16,14 @@ function Home() {
                 </Grid>
                 <Grid item xs={6}>
                     <Link to="/qr_generator" style={linkStyle}>
-                        <Button variant="contained" style={buttonStyle}>
+                        <Button variant="contained" style={mainMenuButtonStyle}>
                             Generate QR
                         </Button>
                     </Link>
                 </Grid>
                 <Grid item xs={6}>
                     <Link to="/qr_scanner" style={linkStyle}>
-                        <Button variant="contained" style={buttonStyle}>
+                        <Button variant="contained" style={mainMenuButtonStyle}>
                             Scan QR
                         </Button>
                     </Link>

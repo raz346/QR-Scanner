@@ -4,27 +4,9 @@ import Alert from '@mui/material/Alert';
 import {GetApp} from '@material-ui/icons';
 import { Link } from "react-router-dom";
 import QRcode from 'qrcode.react'
+import {containerStyle, backButton, linkStyle} from './../sharedStyle'
 
 function QRgenerator() {
-    // Style definitions
-    const linkStyle = {textDecoration: 'none'}
-    const containerStyle = {
-        height: '90vh',
-        width: '60vw',
-        backgroundColor: '#ebeff5',
-        boxShadow: '5px 5px 5px #c7d5eb',
-    };
-
-    const backButton = {
-        width: '10vw',
-        height: '6vh',
-        backgroundColor: '#40e36b',
-        fontSize: '1vw',
-        marginRight: '40px',
-        marginTop: '5px'
-    };
-    
-    // 
     const [qr, setQr] = useState('TestYouQrCode');
     const handleChange = (event) => {
         setQr(event.target.value);
